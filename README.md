@@ -1,2 +1,34 @@
-# Poll-API
- 
+# api/poll-rooms/ -> GET (?)
+Showing rooms in REST API view
+
+# api/poll-options/ -> GET (?)
+Showing options in REST API view
+
+# api/poll-rooms/{id} -> GET
+    response_data = {
+        "room":{
+            "id":room.id,
+            "title":room.title
+        },
+        "options":options_data,
+    }
+Showing the specific room datas with the id and 
+its options data
+
+# api/create-poll-room/ -> POST
+Needs a POST requests
+Example json data:
+{
+    "title":"xxxx",
+}
+Creates a room with the title of "xxxx", any string
+
+# api/vote-poll-options/
+
+example post request:
+{
+    "room_id":1,
+    "option_id":2
+}
+
+Has security with caching IP adresses of post requests. (!)
